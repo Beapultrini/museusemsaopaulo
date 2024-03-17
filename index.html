@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon"  type="image/jpg" href="fotos/museu-britanico.png"/> 
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+</head>
+<body class="index">
+    
+    <!--inicio container-->
+    <div id="container">
+
+        <div class="caixaindex">
+            <h1 class="index"> Museus<br> em <br>São Paulo</h1>
+
+            <script>
+                function verificarIdade()
+                {
+                var idade = parseInt(document.getElementById("idade").value);
+                            
+                            if (idade < 12) {
+                                window.location.replace("crianca.html");
+                
+                            } else if(idade>=12 && idade<18) {
+                                window.location.replace("adolescente.html");            
+                            }
+                            else if (idade>17 && idade < 60){
+                                window.location.replace("adulto.html");                        
+                            }
+                            else if (idade>59){
+                                window.location.replace("idoso.html");                        
+                            }
+                            else{
+                                alert ("Por favor, digite um valor numérico para a idade.");
+                            }    
+                            
+                }
+            </script>
+
+                <center>
+                <div class="form">
+                <h3 class="index">Digite sua idade</h3>
+                <input class="caixadetexto" type="text" id="idade" />
+                <input class="botao" type="button" onclick="verificarIdade()" value="Verificar" />
+                </div>
+            </center>
+        </div>
+
+        <!--inicio footer-->
+        <center>
+        <div  class="footerindex">
+            <h6>Beatriz Pultrini 2024 - ©Todos os direitos reservados
+            <br>Trabalho Acadêmico - Sem fins Lucrativos</h6>
+        </div>
+        </center>
+        <!--fim footer-->
+    </div>
+    <!--fim container-->
+</body>
+</html>
